@@ -1,0 +1,43 @@
+{% extends "03_base.html" %}
+
+{% block content %}
+
+<div class="container">
+        <div class="card" style="width: 36rem;">
+            <img src="../static/word.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Welcome to Word Game</h5>
+              <p class="card-text">Here are the rules to frame a word:</p>
+              <ul>
+                <li>First letter should be a Capital word</li>
+                <li>Last letter of that word should be a Number</li>
+                <li>It should consists atleast one symbol</li>
+              </ul>
+              <p>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Samples
+                  </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <p>Gokul@48</p> 
+                  </div>
+                </div>
+            </div>
+
+            <div class="card-body" >
+                <form action="{{url_for('output')}}">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Enter your Word:</label>
+                      <input type="text" name= "word" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="I'm a Text">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me to add your word to the output list</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+            </div>
+
+{% endblock %}

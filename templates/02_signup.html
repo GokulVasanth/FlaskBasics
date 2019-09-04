@@ -1,0 +1,16 @@
+{% extends "02_base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <p>Welcome to Sign up</p>
+    <form action="{{url_for('thankyou')}}">
+        <label for="">username</label>
+        <input type="text" name="username" id="">
+        <label for="">password</label>
+        <input type="password">
+        <input type="submit" value='Submit Form' >
+    </form>
+</div>
+
+{% endblock %}

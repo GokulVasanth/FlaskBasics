@@ -26,11 +26,8 @@ class Word():
     def validate(self,checked_list):
         key_list = []
         if all(checked_list):
-            key_list = ['Perferct word']  
+            key_list = ['Perfect word']  
         else:
             # key_list = [key for key in range(0,len(checked_list)-1) if checked_list[key] == 0]
             key_list = [self.check_list[key] for key,value in enumerate(checked_list) if value == 0]
         return key_list
-
-letter = Word()
-print(letter.validate(letter.check('g@48')))

@@ -10,8 +10,8 @@ def index():
 @app.route('/output')
 def output():
     word = request.args.get('word')
-    sample_instance = Word()
-    output = sample_instance.check(word)
+    letter = Word()
+    output = letter.validate(letter.check(word))
     return render_template('03_output.html', output = output)
 
 if __name__ == '__main__':
